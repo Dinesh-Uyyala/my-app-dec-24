@@ -1,5 +1,5 @@
-Angular Installation
-====================
+Angular Project Installation
+============================
 
 1) NodeJS installation
     check: npm -v
@@ -17,7 +17,7 @@ Angular Installation
             -> rounting
             ->css
 
-4) Run Angular Application
+4) Run Angular Application in VS Code
     ng serve
     check: http://localhost:4200
 
@@ -27,8 +27,8 @@ Angular Installation
     
 
 
-    GIT Explanation
-    ===============
+GIT :
+=====
     1) Git Install
     2) Create account in GitHub
 
@@ -52,3 +52,9 @@ Angular Installation
     changes-> staged changes
 
     git commit -m "XXXXX"
+
+    git push
+
+    ***) fist time push suggetion command with -f
+
+    pull request-> approve-> merge
