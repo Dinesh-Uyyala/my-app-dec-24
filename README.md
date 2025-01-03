@@ -58,3 +58,21 @@ GIT :
     ***) fist time push suggetion command with -f
 
     pull request-> approve-> merge
+
+
+
+
+
+
+
+
+    Directives: useful to alter the DOM
+    ==========
+
+    1) Structural Directives
+        *ngFor, *ngIf
+
+    2) Attribute Directives
+        ngClass, ngStyle
+
+    3) Custom Directives
