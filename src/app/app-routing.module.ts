@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -14,6 +16,8 @@ const routes: Routes = [
     {path:'home',component:HomeComponent},
     {path:'data-binding',component:DataBindingComponent},
     {path:'directives',component:DirectivesComponent},
+    {path:'employee',component:EmployeeComponent},
+    {path:'vehicle',component:VehicleComponent},
   ]},
   {path:'**',component:ErrorComponent},
 

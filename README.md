@@ -76,3 +76,41 @@ GIT :
         ngClass, ngStyle
 
     3) Custom Directives
+
+
+    Pipes:  Useful to alter the Data format (filters)
+    ======
+
+    | lowercase
+    | uppercase
+    | date
+    | date:'yyyy-MM-dd'
+
+    
+API Integration:
+================
+
+1) Create vehilce component and service
+
+2) Import HttpClientModule
+
+3) Inject HttpClient in vehicle service
+   write a get method to hit API
+
+4) API call is an observable so
+   subscribe it in ts to read data
+
+
+
+ALL Possible API Calls
+======================
+
+all             get                 url
+specific        get                 
+filtering       get                 url
+pagination      get
+sorting         get
+
+create          post
+update          put
+delete          delete

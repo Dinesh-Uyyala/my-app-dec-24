@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./directives.component.css']
 })
 export class DirectivesComponent {
-
+ 
   
   // variableName : dataType = intialValue;
   age:number=30;
@@ -21,5 +21,8 @@ export class DirectivesComponent {
     {productName:'mobile',price:50000},
     {productName:'bike',price:500000},
     {productName:'car',price:5000000},
-  ]
+  ];
+
+
+  today:any= new Date();
 }
