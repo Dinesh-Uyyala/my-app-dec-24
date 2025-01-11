@@ -8,11 +8,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from "@angular/common/http";
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +25,15 @@ import { HttpClientModule } from "@angular/common/http";
     DataBindingComponent,
     DirectivesComponent,
     EmployeeComponent,
-    VehicleComponent
+    VehicleComponent,
+    CreateVehicleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

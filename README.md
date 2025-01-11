@@ -122,12 +122,14 @@ API Integration:
 ALL Possible API Calls
 ======================
 
-all             get                 url
+all             get                 (url)
 specific        get                 
-filtering       get                 url
-pagination      get
-sorting         get
+filtering       get                 (url)?filter=term
+pagination      get                 (url)?limit= limitValue &page= pageNumber
+sorting         get                 (url)?sortBy= column &order= order
 
-create          post
-update          put
-delete          delete
+create          post                (url),data
+update          put                 
+delete          delete              (url)/id
+
+
