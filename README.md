@@ -122,14 +122,50 @@ API Integration:
 ALL Possible API Calls
 ======================
 
-all             get                 (url)
-specific        get                 
-filtering       get                 (url)?filter=term
-pagination      get                 (url)?limit= limitValue &page= pageNumber
-sorting         get                 (url)?sortBy= column &order= order
+    all             get                 get(url)
+    specific        get                 get(url/id)
+    filtering       get                 get(url)?filter=term
+    pagination      get                 get(url)?limit= limitValue &page= pageNumber
+    sorting         get                 get(url)?sortBy= column &order= order
 
-create          post                (url),data
-update          put                 
-delete          delete              (url)/id
+    create          post                post(url),data
+    update          put                 put(url/id),data
+    delete          delete              delete(url/id)
 
+
+
+Forms
+=====
+1) FormGroup--- FormControls
+2) Nested FormGroup 
+3) Dynamic Forms
+4) Form Array
+5) Validators
+6) Custom Validators
+
+
+
+Form Validations
+================
+
+
+TS:
+===
+
+name:new FormControl('',[Validators.required,Validators.maxLength(10)]);
+
+HTML:
+=====
+
+<div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+    <p *ngIf="CONTROLS?.errors?.['required']">Error Message</p>
+    <p *ngIf="CONTROLS?.errors?.['maxlength']">Error Message</p>
+</div>
+
+
+    CONTROLS:
+    =========
+    1) FormGroup                userForm.get('name')
+    2) Nested FormGroup         userForm.get('address')?.get('pincode')
+    3) FormArray                cardsFormArray.Controls[i]?.get('cvv')
 

@@ -1,7 +1,9 @@
 <h1>Login</h1>
 
-<label for="">Username</label>
-<input type="text"><br>
-<label for="">Password</label>
-<input type="password"><br>
-<button routerLink="/dashboard">Login</button>
+<form action="" [formGroup]="loginForm">
+    <label for="">Email</label>
+    <input type="text" formControlName="email"><br>
+    <label for="7">Password</label>
+    <input type="password" formControlName="password"><br>
+    <button (click)="login()">Login</button>
+</form>
