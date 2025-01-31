@@ -169,3 +169,97 @@ HTML:
     2) Nested FormGroup         userForm.get('address')?.get('pincode')
     3) FormArray                cardsFormArray.Controls[i]?.get('cvv')
 
+
+
+
+
+
+
+Communications:
+===============
+
+    1) component communication
+        -> Parent to child
+        -> Child to parent
+        -> Sibilng
+    2) page communication (view, edit)
+    3) module communication
+
+
+
+parent.html
+============
+
+    <app-child [a]="10" (bEvent)="store($event)"></app-child>
+
+child.ts
+========
+    
+    @Input() a:number = 0;
+
+    @Output() bEvent:EventEmitter<number> = new EventEmitter();
+
+    send(){
+        this.bEvent.emit(20);
+    }
+
+
+
+<!-- Reusable Components -->
+
+<app-rating [rating]=""></app-rating>
+
+<app-likes [likes]="10" [sad]="20" [love]="15" [angry]="5"></app-likes>
+
+
+
+
+
+
+
+
+
+
+
+
+
+CUSTOMS
+=======
+
+1) Custom Directives - Done
+2) Custom Pipes - Done
+3) Custom Datatypes/Modal, Interface - Done
+4) Custom Validations - Done
+5) Custom API / Dummy API - Done
+6) Custom Interceptors -Done
+7) Custom Commands - Done
+
+
+
+Bundle Optimizations
+====================
+
+1) Minification
+    <div>
+        <p>abcd</p>
+    </div>
+
+    <div><p>abcd</p></div>
+
+2) Uglification
+    age:number=0;
+    vehicles:any=[];
+    get(){};
+
+3) Tree Shaking
+    usedCode(){
+        console.log("used Code);
+        
+    }
+
+    //removed unused code or dead code
+    unusedCode(){
+        console.log("unused Code);
+    }
+
+4) AOT vs JIT

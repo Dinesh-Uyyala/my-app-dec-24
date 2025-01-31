@@ -1,6 +1,7 @@
 import { Component, OnInit, OnChanges, SimpleChanges, 
   DoCheck, AfterContentInit, AfterContentChecked,
   AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-home',
@@ -54,4 +55,12 @@ ngOnDestroy() {
 console.log('ngOnDestroy: Component destroyed');
 clearInterval(this.intervalId);
 }
+
+user:User={
+ name:'',
+ age:0
+}
+
+
+
 }
