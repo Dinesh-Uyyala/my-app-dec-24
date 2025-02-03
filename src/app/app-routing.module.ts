@@ -19,6 +19,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
+import { DummyComponent } from './dummy/dummy.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -46,6 +47,7 @@ const routes: Routes = [
     }
 
   ]},
+  {path:'dummy',component:DummyComponent},
   {path:'**',component:ErrorComponent},
 
 ];
