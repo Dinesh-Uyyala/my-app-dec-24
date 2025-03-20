@@ -1,0 +1,36 @@
+<!-- todo app -->
+<div class="card">
+    <div class="input">
+        <input type="text" required placeholder="Enter Todo Task" [(ngModel)]="task">
+        <input type="submit" (click)="submit()">
+    </div>
+    <div class="checklist" *ngFor="let task of tasks">
+        <input type="checkbox">
+        <label for="">{{task}}</label>
+        <button (click)="delete()">Delete</button>
+    </div>
+</div>
+
+<!-- drag and drop app -->
+<div class="todo-list" cdkDropList (cdkDropListDropped)="onItemDropped($event)">
+    <div
+      *ngFor="let item of todoItems; let i = index"
+      cdkDrag
+      class="todo-item"
+      [cdkDragData]="item"
+    >
+      {{ item }}
+    </div>
+  </div>
+
+  <div class="todo-list" cdkDropList (cdkDropListDropped)="onItemDropped($event)">
+    <div
+      *ngFor="let item of foodItems; let i = index"
+      cdkDrag
+      class="todo-item"
+      [cdkDragData]="item"
+    >
+      {{ item }}
+    </div>
+  </div>
+  

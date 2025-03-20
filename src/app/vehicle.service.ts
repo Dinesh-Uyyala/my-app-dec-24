@@ -1,44 +1,45 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+// import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VehicleService {
-      // baseUrl:string="/assets/data.json"
-  baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
-  constructor(private _httpClient:HttpClient) { }
+  baseUrl= "https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
 
-  getVehicles():Observable<any>{
-      return this._httpClient.get(this.baseUrl);
+  constructor(private _httpClient: HttpClient) { }
+
+  getVehicles(): Observable<any> {
+    return this._httpClient.get(this.baseUrl);
   }
 
-  getFilteredVehicles(term:string):Observable<any>{
-    return this._httpClient.get(this.baseUrl+"?filter="+term);
+  getFilteredVehicles(term: string): Observable<any> {
+    return this._httpClient.get(`${this.baseUrl}?filter=${term}`);
   }
 
-  getSortedVehicles(column:string,order:string):Observable<any>{
-    return this._httpClient.get(this.baseUrl+"?sortBy="+column+"&order="+order);
+  getSortedVehicles(column: string, order: string): Observable<any> {
+    return this._httpClient.get(`${this.baseUrl}?sortBy=${column}&order=${order}`);
   }
 
-  getPaginatedVehicles(limit:number,page:number){
-    return this._httpClient.get(this.baseUrl+"?limit="+limit+"&page="+page);
+  getPaginatedVehicles(limit: number, page: number): Observable<any> {
+    return this._httpClient.get(`${this.baseUrl}?limit=${limit}&page=${page}`);
   }
 
-  deleteVehicle(id:number){
-    return this._httpClient.delete(this.baseUrl+"/"+id);
+  deleteVehicle(id: number): Observable<any> {
+    return this._httpClient.delete(`${this.baseUrl}/${id}`);
   }
 
-  createVehicle(data:any){
-    return this._httpClient.post(this.baseUrl,data);
+  createVehicle(data: any): Observable<any> {
+    return this._httpClient.post(this.baseUrl, data);
   }
 
-  getVehicle(id:number):Observable<any>{
-    return this._httpClient.get(this.baseUrl+"/"+id)
+  getVehicle(id: number): Observable<any> {
+    return this._httpClient.get(`${this.baseUrl}/${id}`);
   }
 
-  updateVehicle(id:number,data:any){
-    return this._httpClient.put(this.baseUrl+"/"+id,data)
+  updateVehicle(id: number, data: any): Observable<any> {
+    return this._httpClient.put(`${this.baseUrl}/${id}`, data);
   }
 }

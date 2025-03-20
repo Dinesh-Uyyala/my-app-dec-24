@@ -263,3 +263,90 @@ Bundle Optimizations
     }
 
 4) AOT vs JIT
+
+
+Git:
+====
+
+    1) Git install
+    2) create account in GitHub
+
+        git config --global user.name "username"
+        git config --global user.email "email"
+
+        check:
+        ======
+            git config --list
+
+Project--> Repository
+=====================
+1) create repository in GitHub
+2) git init
+3) Link Repository to the project
+    git remote add origin URL
+        check:
+        ======
+        git remote -v
+
+Process
+=======
+
+1) git add .                changes -> staged changes
+2) git commit -m "message"  staged changes -> 0
+3) git push                 Check commit list in GitHub
+
+
+Process with Branches
+=====================
+1) git clone URL
+2) Create Feature Branch- create in GitHub
+3) git fetch
+4) git checkout branchName
+    check:
+    ======
+    git branch
+
+
+    1) git add .                
+    2) git commit -m "message" 
+    3) git push     
+    4) Pull Request -> Approve -> Merge
+
+
+1) Merge Conflicts
+==================
+    -> git checkout to the branch
+    -> git pull origin master
+    -> Conflict--> current, incoming, both
+    -> git push
+
+2) Shift Branches
+=================
+1) commit changes and shift to the branch
+2) Stash changes (git stash --include-untracked)
+3) git checkout desiredBranch
+4) git checkout previousBranch
+5) git stash pop
+
+3) Delete Commit from Branch
+============================ 
+    git log
+    1234
+    5678
+
+    git reset --hard 1234
+
+4) Move Commit to another Branch
+================================
+
+create a branch ---> for new branch only
+git checkout branchName
+git cherry-pick 5678
+
+5) Two Branches code into new Branch
+=====================================
+
+create a new branch(Branch 3)
+
+git pull origin feature/one (branch 1)
+git pull origin feature/two (branch 2)

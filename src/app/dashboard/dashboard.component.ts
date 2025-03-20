@@ -13,4 +13,12 @@ export class DashboardComponent {
       alert("Logout Successfully!");
       this._router.navigateByUrl("/login");
     }
+
+    // Set the default theme to light
+  theme = 'light-theme';
+
+  // Toggle between light and dark theme
+  toggleTheme(event:any) {
+    this.theme = event.target.checked ? 'dark-theme' : 'light-theme';
+  }
 }

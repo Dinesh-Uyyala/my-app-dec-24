@@ -20,12 +20,16 @@ import { ChildComponent } from './child/child.component';
 import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
 import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 import { DummyComponent } from './dummy/dummy.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
+import { OperatorsComponent } from './operators/operators.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'',component:LoginComponent},
   {path:'dashboard',canActivate:[AuthenticationGuard] ,component:DashboardComponent,children:[
     {path:'home',canActivate:[AuthenticationGuard],component:HomeComponent},
+    {path:'welcome',canActivate:[AuthenticationGuard],component:WelcomeComponent},
     {path:'data-binding',canActivate:[AuthenticationGuard],component:DataBindingComponent},
     {path:'directives',canActivate:[AuthenticationGuard],component:DirectivesComponent},
     {path:'employee',canActivate:[AuthenticationGuard],component:EmployeeComponent},
@@ -41,13 +45,15 @@ const routes: Routes = [
     {path:'child',component:ChildComponent},
     {path:'about-ceo',component:AboutCeoComponent},
     {path:'about-company',component:AboutCompanyComponent},
+    {path:'dummy',component:DummyComponent},
+    {path:'ng-directives',component:NgDirectivesComponent},
+    {path:'operators',component:OperatorsComponent},
     { 
       path: 'payment', 
       loadChildren: () => import('./payment/payment.module').then(m => m.PaymentModule)
     }
 
   ]},
-  {path:'dummy',component:DummyComponent},
   {path:'**',component:ErrorComponent},
 
 ];

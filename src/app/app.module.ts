@@ -28,6 +28,12 @@ import { BalancePipe } from './balance.pipe';
 import { TokenInterceptor } from './token.interceptor';
 import { AboutUsModule } from './about-us/about-us.module';
 import { DummyComponent } from './dummy/dummy.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgDirectivesComponent } from './ng-directives/ng-directives.component';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { OperatorsComponent } from './operators/operators.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +59,10 @@ import { DummyComponent } from './dummy/dummy.component';
     CapitalDirective,
     BalancePipe,
     DummyComponent,
+    WelcomeComponent,
+    NgDirectivesComponent,
+    CalculatorComponent,
+    OperatorsComponent,
     
   ],
   imports: [
@@ -61,7 +71,9 @@ import { DummyComponent } from './dummy/dummy.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    AboutUsModule
+    AboutUsModule,
+    DragDropModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {

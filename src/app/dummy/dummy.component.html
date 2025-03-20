@@ -1,1 +1,30 @@
-<p>This is Dummy Component</p>
+<button (click)="toggleLoginStatus()">Toggle Login Status</button>
+    
+    <!-- Conditional Content -->
+    <ng-container *ngIf="isLoggedIn">
+      <p>Welcome, User!</p>
+    </ng-container>
+
+    <!-- Looping through a list with *ngFor -->
+    <ul>
+      <li *ngFor="let item of items">{{ item }}</li>
+    </ul>
+
+    <!-- Content Projection with ng-content -->
+     <app-home>
+      <p>This is the content projected into the card!</p>
+     </app-home>
+    <app-home>
+      <h1>Another Card</h1>
+      <p>This is a custom content inside the card.</p>
+    </app-home>
+
+    <!-- ng-template for Deferred Rendering -->
+    <button (click)="showTemplate = !showTemplate">Toggle Template</button>
+    <div *ngIf="showTemplate; else templateRef">
+      <p>This content is directly rendered.</p>
+    </div>
+    
+    <ng-template #templateRef>
+      <p>This content is inside the template!</p>
+    </ng-template>

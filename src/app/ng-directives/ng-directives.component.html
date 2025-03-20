@@ -1,0 +1,51 @@
+<!-- ng-container -->
+<ng-container *ngIf="isLoggedIn">
+    <h5>{{name}}</h5>
+    <h6>{{email}}</h6>
+</ng-container>
+
+
+<!-- ng-content -->
+<!-- <app-about-ceo>
+    <h2>This is the parent component data</h2>
+</app-about-ceo>
+<app-about-ceo>
+    <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+</app-about-ceo>
+<app-about-ceo>
+    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus quaerat nihil ex dignissimos, odit cum!</h2>
+</app-about-ceo>
+<app-about-ceo>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+</app-about-ceo>
+<app-about-ceo>
+    <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, quos! </h2>
+</app-about-ceo> -->
+
+
+<!-- ng-template -->
+ <button (click)="submitData()">Click here for the Template data!</button>
+ <div *ngIf="isDataChanged; else changedData">
+    here's the data in the div
+ </div>
+
+ <ng-template #changedData >
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, obcaecati! Amet a cupiditate necessitatibus.
+ </ng-template>
+
+
+
+
+
+
+ <form (ngSubmit)="submit()">
+    <input type="text" >
+    <label for="">Name</label><br>
+    <input type="number">
+    <label for="">Age</label><br>
+    <input type="email">
+    <label for="">Email</label><br>
+    <input type="submit">
+    <input type="reset">
+    <button>cancel</button>
+ </form>
